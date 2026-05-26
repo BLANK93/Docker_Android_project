@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: ./Dockerfile.gpu
       args:
-        - API_LEVEL=34
+        - API_LEVEL=32
         - CMD_LINE_VERSION=11076708_latest
         - IMG_TYPE=google_apis_playstore
     ports:
