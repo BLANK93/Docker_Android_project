@@ -29,3 +29,10 @@ services:
       - "host.docker.internal:host-gateway"
     devices:
       - /dev/kvm:/dev/kvm
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
