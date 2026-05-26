@@ -78,9 +78,10 @@ services:
       - DISABLE_HIDDEN_POLICY=true
       - SKIP_AUTH=false
       - GPU_ACCELERATED=false
+      - EXTRA_FLAGS=-no-audio
       #- ANDROID_ADB_SERVER_ADDRESS=host.docker.internal
-      - MEMORY=8192
-      - CORES=6
+      - MEMORY=4096
+      - CORES=4
     privileged: true
     tty: true
     stdin_open: true
