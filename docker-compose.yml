@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: ./Dockerfile.gpu
       args:
-        - API_LEVEL=32
+        - API_LEVEL=30
         - CMD_LINE_VERSION=11076708_latest
         - IMG_TYPE=google_apis_playstore
     ports:
@@ -16,7 +16,7 @@ services:
       - SKIP_AUTH=false
       - GPU_ACCELERATED=false
       - EXTRA_FLAGS=-no-audio -no-snapshot -no-metrics
-      - MEMORY=6144
+      - MEMORY=8192
       - CORES=4
     privileged: true
     tty: true
